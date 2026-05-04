@@ -356,3 +356,24 @@ if (lightbox && allGalleryItems.length > 0) {
     openLightbox(currentPosterIndex);
   }
 }
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let name = document.querySelector('[name="name"]').value;
+  let phone = document.querySelector('[name="phone"]').value;
+  let email = document.querySelector('[name="email"]').value;
+  let service = document.querySelector('[name="service"]').value;
+  let message = document.querySelector('[name="message"]').value;
+
+  let text = `New Inquiry:%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Email: ${email}%0A
+Service: ${service}%0A
+Message: ${message}`;
+
+  let url = `https://wa.me/917984319140?text=${text}`;
+
+  window.open(url, "_blank");
+});
