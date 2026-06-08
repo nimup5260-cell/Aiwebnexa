@@ -200,8 +200,19 @@ if (form && status) {
       return;
     }
 
-    status.textContent = `Thanks ${name}, your inquiry for ${service} is ready. This demo page is not connected to a backend yet, but the form is working with validation.`;
+    const whatsappText = [
+      "New Inquiry:",
+      `Name: ${name}`,
+      `Phone: ${phone}`,
+      `Email: ${email}`,
+      `Service: ${service}`,
+      `Message: ${message}`
+    ].join("\n");
+    const whatsappUrl = `https://wa.me/917984319140?text=${encodeURIComponent(whatsappText)}`;
+
+    status.textContent = `Thanks ${name}, your inquiry for ${service} is ready. Opening WhatsApp now.`;
     status.classList.add("success");
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
     form.reset();
   });
 }
@@ -356,24 +367,3 @@ if (lightbox && allGalleryItems.length > 0) {
     openLightbox(currentPosterIndex);
   }
 }
-
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  let name = document.querySelector('[name="name"]').value;
-  let phone = document.querySelector('[name="phone"]').value;
-  let email = document.querySelector('[name="email"]').value;
-  let service = document.querySelector('[name="service"]').value;
-  let message = document.querySelector('[name="message"]').value;
-
-  let text = `New Inquiry:%0A
-Name: ${name}%0A
-Phone: ${phone}%0A
-Email: ${email}%0A
-Service: ${service}%0A
-Message: ${message}`;
-
-  let url = `https://wa.me/917984319140?text=${text}`;
-
-  window.open(url, "_blank");
-});
