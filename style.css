@@ -789,6 +789,10 @@
       margin-top: 10px;
     }
 
+    .testimonial-grid {
+      grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.8fr);
+    }
+
     .methodology-card {
       padding: 30px 26px;
       display: flex;
@@ -830,10 +834,50 @@
       box-shadow: 0 22px 50px rgba(0, 0, 0, 0.16);
     }
 
+    .google-review-head {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .google-review-head strong,
+    .google-review-head span {
+      display: block;
+    }
+
+    .google-review-head span {
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .google-mark {
+      width: 42px;
+      height: 42px;
+      flex: 0 0 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #ffffff;
+      color: #4285f4;
+      font: 800 1.35rem Arial, sans-serif;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .google-mark.large {
+      width: 58px;
+      height: 58px;
+      font-size: 1.75rem;
+    }
+
     .testimonial-rating {
       color: #ffd166;
       font-size: 1.1rem;
       letter-spacing: 0.02em;
+    }
+
+    .testimonial-rating span {
+      color: rgba(255, 209, 102, 0.3);
     }
 
     .testimonial-quote {
@@ -872,6 +916,39 @@
       color: var(--muted);
       font-size: 0.95rem;
       line-height: 1.5;
+    }
+
+    .google-review-link {
+      width: fit-content;
+      color: #8fc2ff;
+      font-weight: 650;
+      transition: color 0.2s ease;
+    }
+
+    .google-review-link:hover {
+      color: #ffffff;
+    }
+
+    .google-review-cta {
+      padding: 30px;
+      border-radius: 24px;
+      border: 1px solid rgba(66, 133, 244, 0.25);
+      background: linear-gradient(145deg, rgba(66, 133, 244, 0.12), rgba(138, 51, 255, 0.08));
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .google-review-cta h3,
+    .google-review-cta p {
+      margin: 0;
+    }
+
+    .google-review-cta p {
+      color: var(--muted);
+      line-height: 1.6;
     }
 
     .portfolio-card:hover,
