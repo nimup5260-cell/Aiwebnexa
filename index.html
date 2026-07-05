@@ -34,7 +34,7 @@
     "url": "https://www.aiwebnexa.com",
     "logo": "https://www.aiwebnexa.com/images/logo-removebg-preview.png",
     "email": "aiwebnexa@gmail.com",
-    "telephone": "+917984319140",
+    "telephone": ["+917984319140", "+917984163321"],
     "sameAs": [
       "https://www.instagram.com/aiwebnexa/",
       "https://www.linkedin.com/in/nimay-patel-25a684275/",
@@ -58,12 +58,12 @@
         </div>
       </a>
 
-      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">
         <svg><use href="icons.svg#i-menu"></use></svg>
       </button>
 
-      <nav class="nav-links" id="navLinks">
-        <a href="index.html" class="active">Home</a>
+      <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+        <a href="index.html" class="active" aria-current="page">Home</a>
         <a href="services.html">Services</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
@@ -78,11 +78,11 @@
       <div class="welcome-banner">
         <div class="welcome-content">
           <div class="welcome-text">
-            <h1 class="welcome-title">
+            <div class="welcome-title" role="status" aria-live="polite">
               <span class="welcome-word">Welcome</span>
               <span class="welcome-word">to</span>
               <span class="welcome-highlight">AIWebNexa</span>
-            </h1>
+            </div>
             <p class="welcome-subtitle">Your Premium Digital Solutions Partner</p>
           </div>
           <div class="welcome-loader">
@@ -180,7 +180,7 @@
         <div class="visual-stack">
           <div class="founder-card" data-reveal>
             <div class="founder-photo">
-              <img src="images/founder-nimay.png" alt="Nimay Patel, Founder and Web Developer">
+              <img src="images/founder-nimay.png" alt="Nimay Patel, Founder and Web Developer" width="520" height="620" decoding="async">
             </div>
             <div class="founder-info">
               <span class="eyebrow">Founder</span>
@@ -234,7 +234,7 @@
 
         <div class="project-spotlight-visual">
           <div class="spotlight-frame business-preview">
-            <img src="images/premium-website.png" alt="Premium business website direction preview">
+            <img src="images/premium-website.png" alt="Premium business website direction preview" loading="lazy" decoding="async">
             <span class="spotlight-badge">Premium Website Concept</span>
             <div class="spotlight-card">
               <strong>Built For Trust</strong>
@@ -247,7 +247,7 @@
       <div class="portfolio-grid">
         <article class="portfolio-card" data-reveal>
           <div class="portfolio-preview business-preview">
-            <img src="images/portfolio-business.png" alt="Business website mockup preview">
+            <img src="images/portfolio-business.png" alt="Business website mockup preview" loading="lazy" decoding="async">
             <span>Business Website</span>
           </div>
           <div class="portfolio-content">
@@ -267,7 +267,7 @@
 
         <article class="portfolio-card" data-reveal>
           <div class="portfolio-preview landing-preview">
-            <img src="images/protfolio-landingpage.png" alt="Landing page mockup preview">
+            <img src="images/protfolio-landingpage.png" alt="Landing page mockup preview" loading="lazy" decoding="async">
             <span>Landing Page</span>
           </div>
           <div class="portfolio-content">
@@ -287,7 +287,7 @@
 
         <article class="portfolio-card" data-reveal>
           <div class="portfolio-preview branding-preview">
-            <img src="images/protfolio-branding.png" alt="Branding design kit mockup preview">
+            <img src="images/protfolio-branding.png" alt="Branding design kit mockup preview" loading="lazy" decoding="async">
             <span>Branding Design</span>
           </div>
           <div class="portfolio-content">
@@ -509,9 +509,9 @@
       <div class="footer-bottom">
         <p>&copy; 2026 AIWebNexa Technologies. All rights reserved.</p>
         <div class="footer-legal">
-          <a href="#privacy">Privacy Policy</a>
-          <a href="#terms">Terms of Service</a>
-          <a href="#cookies">Cookie Settings</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="privacy.html#cookies">Cookie Settings</a>
         </div>
       </div>
     </footer>

@@ -16,4 +16,12 @@
     <loc>https://www.aiwebnexa.com/contact.html</loc>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.aiwebnexa.com/privacy.html</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.aiwebnexa.com/terms.html</loc>
+    <priority>0.3</priority>
+  </url>
 </urlset>

@@ -1,10 +1,10 @@
 // Welcome Banner Animation Handler
 const welcomeBanner = document.querySelector(".welcome-banner");
 if (welcomeBanner) {
-  // Remove banner from DOM after animation completes (3.5s total: 0.5s delay + 3s animation)
+  // Remove the short welcome overlay after its animation completes.
   setTimeout(() => {
     welcomeBanner.style.display = "none";
-  }, 3500);
+  }, 1900);
 
   // Allow click to close banner early
   welcomeBanner.addEventListener("click", () => {
